@@ -1,0 +1,148 @@
+body {
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    margin: 0;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto; 
+    padding: 0 20px; /* Horizontal padding */
+    flex-grow: 1; /* Allows the container to grow and fill available space */
+}
+
+/* Header Styles */
+.header {
+    background-color: #222; /* Dark background */
+    color: #fff; /* White text */
+    padding: 1rem 0; /* Vertical padding */
+}
+
+.header .container {
+    display: flex; /* Flexbox for layout */
+    align-items: center; /* Vertically center items */
+    justify-content: space-between; /* Space out title and nav */
+    align-items: center; /* Vertically align items */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    gap: 15px; /* Gap between items if they wrap */
+}
+
+.site-title {
+    margin: 0;
+    font-size: 2.5rem; /* Larger font for the title */
+}
+
+.main-nav ul {
+    list-style: none; /* Remove bullet points */
+    padding: 0;
+    margin: 0;
+    display: flex; /* Display navigation links horizontally */
+    gap: 25px; /* Space between links */
+}
+
+.main-nav a {
+    color: #fff; /* White text for links */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+.main-nav a:hover {
+    background-color: #555; /* Slightly lighter background on hover */
+}
+
+/* Main Content Area */
+main {
+    flex-grow: 1; /* Allows main content to grow and push footer down */
+}
+
+/* Section Styles */
+.section {
+    padding: 60px 0; /* Ample vertical padding for each section */
+    border-bottom: 1px solid #ddd; /* Separator between sections */
+    text-align: center;
+}
+
+.section:last-of-type { /* Use last-of-type to avoid border on the last visible section before footer */
+    border-bottom: none;
+}
+
+.section h2 {
+    font-size: 2rem; /* Consistent heading size */
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* About Section Specifics */
+.about-section p {
+    max-width: 800px; /* Limit paragraph width for readability */
+    margin: 0 auto; /* Center the paragraph */
+    font-size: 1.1rem;
+}
+
+/* Projects and Contact section text */
+.projects-section p,
+.contact-section p {
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+
+/* Footer Styles */
+.footer {
+    background-color: #222; /* Dark background, similar to header */
+    color: #fff; /* White text */
+    text-align: center;
+    padding: 20px 0;
+    /* Fixed footer to the bottom */
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.2); /* Subtle shadow above footer */
+}
+
+/* Add padding to the body to prevent content from being hidden by the fixed footer */
+body {
+    padding-bottom: 60px; /* Adjust this value to match your footer's height */
+}
+
+.footer p {
+    margin: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .header .container {
+        flex-direction: column; /* Stack title and nav vertically on small screens */
+    }
+
+    .site-title {
+        font-size: 2rem;
+    }
+
+    .main-nav ul {
+        flex-direction: column; /* Stack nav links vertically on small screens */
+        gap: 10px;
+    }
+
+    .section {
+        padding: 40px 0;
+    }
+
+    .section h2 {
+        font-size: 1.8rem;
+    }
+
+    body {
+        /* Adjust padding for smaller screens if footer height changes or layout needs */
+        padding-bottom: 60px; /* Keep consistent or adjust as needed */
+    }
+}
