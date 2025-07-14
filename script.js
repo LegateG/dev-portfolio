@@ -1,6 +1,39 @@
 // Wait for DOM to be fully loaded before running JavaScript
 document.addEventListener('DOMContentLoaded', function() {
     
+    // Initialize Typed.js animation
+    function initTypedAnimation() {
+        const typedElement = document.getElementById('typed-element');
+        
+        if (typedElement) {
+            const typed = new Typed('#typed-element', {
+                strings: [
+                    'data analyst',
+                    'business intelligence developer',
+                    'web developer',
+                    'problem solver',
+                    'lifelong learner',
+                    'data visualization expert'
+                ],
+                typeSpeed: 50,
+                backSpeed: 30,
+                backDelay: 1500,
+                startDelay: 500,
+                loop: true,
+                showCursor: true,
+                cursorChar: '|',
+                autoInsertCss: true,
+                contentType: 'html'
+            });
+            
+            // Store typed instance for potential cleanup
+            window.typedInstance = typed;
+        }
+    }
+    
+    // Initialize the typing animation
+    initTypedAnimation();
+    
     // Select all detail buttons and project details
     const detailButtons = document.querySelectorAll('.details-btn');
     const projectDetails = document.querySelectorAll('.project-details');
@@ -262,5 +295,14 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    console.log('Portfolio JavaScript loaded successfully!');
+    // Handle window resize to ensure typed animation stays responsive
+    window.addEventListener('resize', function() {
+        // Typed.js handles this automatically, but we can add custom logic if needed
+        if (window.typedInstance) {
+            // The instance is available for any custom resize handling
+            console.log('Window resized - Typed.js animation still running');
+        }
+    });
+    
+    console.log('Portfolio JavaScript loaded successfully with Typed.js integration!');
 });
