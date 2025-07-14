@@ -195,6 +195,54 @@ main {
     color: #555;
 }
 
+/* Typing Animation Styles */
+.typing-container {
+    margin: 20px 0 30px 0;
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.typed-text {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #333;
+    line-height: 1.4;
+}
+
+#typed-element {
+    color: #007bff;
+    font-weight: bold;
+}
+
+/* Typed.js cursor customization */
+.typed-cursor {
+    opacity: 1;
+    animation: typedjsBlink 0.7s infinite;
+    -webkit-animation: typedjsBlink 0.7s infinite;
+    animation: typedjsBlink 0.7s infinite;
+}
+
+@keyframes typedjsBlink {
+    50% { opacity: 0.0; }
+}
+
+@-webkit-keyframes typedjsBlink {
+    0% { opacity: 1; }
+    50% { opacity: 0.0; }
+    100% { opacity: 1; }
+}
+
+/* About description styling */
+.about-description {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+}
+
 /* Projects Section Styles */
 .project-gallery {
     display: grid;
@@ -356,6 +404,16 @@ main {
     .project-card {
         padding: 20px;
     }
+
+    /* Responsive typing animation */
+    .typed-text {
+        font-size: 1.2rem;
+    }
+
+    .typing-container {
+        min-height: 50px;
+        padding: 0 10px;
+    }
 }
 
 /* Extra small devices (600px and below) */
@@ -383,6 +441,11 @@ main {
     }
 
     .project-card h3 {
+        font-size: 1.1rem;
+    }
+
+    /* Extra small screen typing animation */
+    .typed-text {
         font-size: 1.1rem;
     }
 }
