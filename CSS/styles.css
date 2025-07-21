@@ -149,17 +149,13 @@ body {
     margin-bottom: 20px;
 }
 
-.social-logo-github {
-    height: 35px; /* Control logo size */
-    transition: transform 0.3s ease; /* Add transition for hover effect */
+.social-logo {
+    height: 35px; /* Set a consistent height */
+    width: auto;  /* Maintain aspect ratio */
+    transition: transform 0.3s ease;
 }
 
-.social-logo-linkedin {
-    height: 40px; /* Control logo size */
-    transition: transform 0.3s ease; /* Add transition for hover effect */
-}
-
-.social-links-contact .social-link:hover img {
+.social-links-contact .social-link:hover .social-logo {
     transform: scale(1.1); /* Slightly enlarge logo on hover */
 }
 
