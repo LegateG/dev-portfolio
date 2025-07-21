@@ -10,13 +10,22 @@
     <header class="header">
         <div class="container">
             <h1 class="site-title">Gorkem Bayar</h1>
-            <nav class="main-nav">
-                <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
+            
+            <div class="header-controls">
+                <div class="burger-menu" id="burger-menu">
+                    <div class="burger-line"></div>
+                    <div class="burger-line"></div>
+                    <div class="burger-line"></div>
+                </div>
+
+                <nav class="main-nav" id="main-nav">
+                    <ul>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
         </div>
     </header>
 
@@ -79,6 +88,14 @@
         <section id="contact" class="section contact-section">
             <div class="container">
                 <h2>Contact Me</h2>
+                <div class="social-links-contact">
+                    <a href="https://github.com/LegateG/" target="_blank" class="social-link">
+                        <img src="https://github.githubassets.com/assets/GitHub-Logo-ee398b662d42.png" alt="GitHub Logo" class="social-logo-github">
+                    </a>
+                    <a href="https://www.linkedin.com/in/gorkemb" target="_blank" class="social-link">
+                        <img src="https://content.linkedin.com/content/dam/me/business/en-us/amp/xbu/linkedin-revised-brand-guidelines/linkedin-logo/fg/brandg-linkedinlogo-hero-logo-dsk-v01.png/jcr:content/renditions/brandg-linkedinlogo-hero-logo-dsk-v01-2x.png" alt="LinkedIn Logo" class="social-logo-linkedin">
+                    </a>
+                </div>
                 <p>Have a project in mind or want to discuss opportunities? I'd love to hear from you!</p>
                 
                 <form id="contact-form" class="contact-form">
@@ -109,7 +126,6 @@
         </div>
     </footer>
 
-    <!-- Typed.js CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
     <script src="script.js" defer></script>
 </body>
