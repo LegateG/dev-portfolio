@@ -1,3 +1,52 @@
+/* Theme variables */
+:root {
+    --primary-bg-color: #f4f4f4;
+    --secondary-bg-color: #fff;
+    --header-bg-color: #222;
+    --text-color: #333;
+    --heading-color: #444;
+    --card-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    --border-color: #ddd;
+}
+
+.dark-mode {
+    --primary-bg-color: #1a1a1a;
+    --secondary-bg-color: #2b2b2b;
+    --header-bg-color: #0d0d0d;
+    --text-color: #e0e0e0;
+    --heading-color: #f0f0f0;
+    --card-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    --border-color: #444;
+}
+
+/* Theme Toggle Button Styles */
+.theme-toggle-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.theme-toggle-btn:hover {
+    transform: scale(1.1);
+}
+
+.theme-icon {
+    width: 25px;
+    height: 25px;
+    filter: invert(1);
+    transition: all 0.5s ease-in-out;
+}
+
+.dark-mode .theme-icon {
+    filter: none;
+}
 /* Contact section text */
 .contact-section p {
     font-size: 1.1rem;
@@ -98,7 +147,7 @@ body {
     padding: 0;
     line-height: 1.6;
     color: #333;
-    background-color: #f4f4f4;
+    background-color: var(--primary-bg-color);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -113,7 +162,7 @@ body {
 
 /* Header Styles */
 .header {
-    background-color: #222;
+    background-color: var(--header-bg-color);
     color: #fff;
     padding: 1rem 0;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
@@ -229,9 +278,9 @@ main {
     padding: 60px 0;
     margin: 20px 0;
     text-align: center;
-    background-color: #fff;
+    background-color: var(--secondary-bg-color);
     border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    box-shadow: var(--card-shadow);
 }
 
 .section:last-of-type {
@@ -240,7 +289,7 @@ main {
 
 .section h2 {
     font-size: 2rem;
-    color: #444;
+    color: var(--heading-color);
     margin-bottom: 20px;
     font-weight: bold;
 }
@@ -251,7 +300,7 @@ main {
     margin: 0 auto;
     font-size: 1.1rem;
     line-height: 1.8;
-    color: #555;
+    color: var(--text-color);
 }
 
 /* Typing Animation Styles */
@@ -311,7 +360,7 @@ main {
 }
 
 .project-card {
-    background: #fff;
+    background: var(--secondary-bg-color);
     border-radius: 10px;
     padding: 25px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
@@ -321,7 +370,7 @@ main {
 
 .project-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    box-shadow: var(--card-shadow);
 }
 
 .project-card h3 {
@@ -374,7 +423,7 @@ main {
 
 .project-details p {
     margin-bottom: 10px;
-    color: #555;
+    color: var(--text-color);
     font-size: 0.9rem;
     line-height: 1.5;
 }
