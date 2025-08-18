@@ -94,14 +94,14 @@
 }
 
 .theme-icon {
-    width: 25px;
-    height: 25px;
-    filter: invert(1);
+    font-size: 1.5rem;
     transition: all 0.5s ease-in-out;
 }
 
+/* Dark mode specific styles for the icon */
 .dark-mode .theme-icon {
-    filter: none;
+    content: "☀️";
+}
 }
 /* Contact section text */
 .contact-section p {
