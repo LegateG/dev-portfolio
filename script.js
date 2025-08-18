@@ -86,7 +86,32 @@ detailsBtns.forEach(btn => {
         }
     });
 });
+// Project filter functionality
+const filterButtons = document.querySelectorAll('.filter-btn');
+const projectCards = document.querySelectorAll('.project-card');
 
+filterButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        // Get the filter value
+        const filter = button.getAttribute('data-filter');
+        
+        // Remove active class from all buttons and add to the clicked one
+        filterButtons.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+
+        // Show/hide projects
+        projectCards.forEach(card => {
+            const category = card.getAttribute('data-category');
+            if (filter === 'all' || category === filter) {
+                card.classList.remove('hidden');
+                card.classList.add('show');
+            } else {
+                card.classList.add('hidden');
+                card.classList.remove('show');
+            }
+        });
+    });
+});
 // Contact form functionality
 document.getElementById('contact-form').addEventListener('submit', function(e) {
     e.preventDefault();
