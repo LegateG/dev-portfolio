@@ -689,3 +689,34 @@ html {
 html {
     scroll-behavior: smooth;
 }
+
+/* Add a small transition to all clickable elements */
+a, button {
+    transition: all 0.3s ease;
+}
+
+/* Button animation on hover */
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Link animation */
+.main-nav a:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Social link hover effect in the contact section */
+.social-link {
+    transition: transform 0.3s ease-in-out;
+}
+
+.social-link:hover {
+    transform: scale(1.1);
+}
