@@ -7,6 +7,12 @@
     --heading-color: #444;
     --card-shadow: 0 2px 10px rgba(0,0,0,0.1);
     --border-color: #ddd;
+    --filter-btn-bg: gainsboro;
+    --filter-btn-color: dimgray;
+    --filter-btn-border: silver;
+    --filter-btn-hover: lightgray;
+    --filter-btn-active-bg: dodgerblue;
+    --filter-btn-active-color: white;
 }
 
 .dark-mode {
@@ -17,6 +23,56 @@
     --heading-color: #f0f0f0;
     --card-shadow: 0 4px 15px rgba(0,0,0,0.3);
     --border-color: #444;
+    --filter-btn-bg: #444;
+    --filter-btn-color: #ccc;
+    --filter-btn-border: #555;
+    --filter-btn-hover: #555;
+    --filter-btn-active-bg: dodgerblue; 
+    --filter-btn-active-color: white;
+}
+
+/* Project filter buttons */
+.filter-buttons {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.filter-btn {
+    background-color: var(--filter-btn-bg);
+    color: var(--filter-btn-color);
+    border: 1px solid var(--filter-btn-border);
+    border-radius: 20px;
+    padding: 8px 18px;
+    margin: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+    background-color: var(--filter-btn-hover);
+}
+
+.filter-btn.active {
+    background-color: var(--filter-btn-active-bg);
+    color: var(--filter-btn-active-color);
+    border-color: var(--filter-btn-active-bg);
+    font-weight: bold;
+}
+
+/* Hiding and showing projects with a class */
+.project-card.hidden {
+    display: none;
+    animation: fadeOut 0.3s ease-out;
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; transform: scale(1); }
+    to { opacity: 0; transform: scale(0.95); }
+}
+
+.project-card.show {
+    animation: fadeIn 0.5s ease-in-out;
 }
 
 /* Theme Toggle Button Styles */
