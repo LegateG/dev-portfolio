@@ -33,33 +33,26 @@ const themeToggleBtn = document.getElementById('theme-toggle');
 const body = document.body;
 const themeIcon = document.querySelector('.theme-icon');
 
-// Check for saved theme in local storage or system preference
+// Check for saved theme in local storage
 const savedTheme = localStorage.getItem('theme');
-if (savedTheme) {
-    body.classList.add(savedTheme);
-    if (savedTheme === 'dark-mode') {
-        themeIcon.src = "https://www.svgrepo.com/show/520803/moon.svg";
-        themeIcon.alt = "Light Mode";
-    }
-} else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+if (savedTheme === 'dark-mode') {
     body.classList.add('dark-mode');
-    themeIcon.src = "https://www.svgrepo.com/show/520803/moon.svg";
-    themeIcon.alt = "Light Mode";
+    themeIcon.textContent = '☀️';
+} else if (savedTheme === 'light-mode') {
+    body.classList.remove('dark-mode');
+    themeIcon.textContent = '🌙';
 }
 
 themeToggleBtn.addEventListener('click', () => {
     body.classList.toggle('dark-mode');
     if (body.classList.contains('dark-mode')) {
-        themeIcon.src = "https://www.svgrepo.com/show/520803/moon.svg";
-        themeIcon.alt = "Light Mode";
+        themeIcon.textContent = '☀️';
         localStorage.setItem('theme', 'dark-mode');
     } else {
-        themeIcon.src = "https://www.svgrepo.com/show/520803/sun-2.svg";
-        themeIcon.alt = "Dark Mode";
+        themeIcon.textContent = '🌙';
         localStorage.setItem('theme', 'light-mode');
     }
 });
-
 // Project details functionality
 const detailsBtns = document.querySelectorAll('.details-btn');
 
