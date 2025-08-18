@@ -581,3 +581,6 @@ html {
         position: relative;
     }
 }
+html {
+    scroll-behavior: smooth;
+}
