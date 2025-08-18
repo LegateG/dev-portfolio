@@ -48,8 +48,14 @@
         <section id="projects" class="section projects-section">
             <div class="container">
                 <h2>My Projects</h2>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="powerbi">Power BI</button>
+                    <button class="filter-btn" data-filter="python">Python</button>
+                    <button class="filter-btn" data-filter="tableau">Tableau</button>
+                </div>
                 <div class="project-gallery">
-                    <div class="project-card">
+                    <div class="project-card" data-category="powerbi">
                         <h3>Permanent Residency Admissions</h3>
                         <p class="project-summary">Interactive Power BI dashboard analyzing Canadian immigration data with user-centered design.</p>
                         <button class="details-btn" data-project="1">Show Details</button>
@@ -61,7 +67,7 @@
                         </div>
                     </div>
 
-                    <div class="project-card">
+                    <div class="project-card" data-category="python">
                         <h3>Diabetes Analysis</h3>
                         <p class="project-summary">Machine learning analysis of diabetes risk factors using Python and statistical modeling.</p>
                         <button class="details-btn" data-project="2">Show Details</button>
@@ -73,7 +79,7 @@
                         </div>
                     </div>
 
-                    <div class="project-card">
+                    <div class="project-card" data-category="tableau">
                         <h3>Water Scarcity</h3>
                         <p class="project-summary">Tableau visualization exploring global water scarcity patterns and socioeconomic factors.</p>
                         <button class="details-btn" data-project="3">Show Details</button>
