@@ -24,6 +24,7 @@
                 <nav class="main-nav" id="main-nav">
                     <ul>
                         <li><a href="#about">About</a></li>
+                        <li><a href="#skills">Skills</a></li>
                         <li><a href="#projects">Projects</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>
@@ -40,8 +41,32 @@
                     <span class="typed-text">I am a <span id="typed-element"></span></span>
                 </div>
                 <p class="about-description">
-                    I am a data professional with a robust background in data analysis, business intelligence, and visualization. Proficient in developing impactful Power BI dashboards and reports, integrating diverse data sources, and applying analytical techniques to support strategic decision-making. Currently, I am expanding my technical foundation through a comprehensive computer programming course, actively developing skills in web technologies including HTML, CSS, and JavaScript to build dynamic and engaging user interfaces. I possess a strong collaborative approach to delivering comprehensive data and web solutions.
+                    Senior Data & BI Analyst with extensive experience in SQL, Data Warehousing, and Dashboard Development (Power BI, Tableau, Looker Studio). Proven track record of building scalable data pipelines and enforcing data governance frameworks to drive data accuracy and business intelligence. Expertise in transforming complex financial and operational datasets into actionable insights, reducing reporting times by 30% and operational costs by 15%. Skilled in cross-functional collaboration with Finance, IT, and Product stakeholders to deliver user-centered analytics solutions.
                 </p>
+            </div>
+        </section>
+
+        <section id="skills" class="section skills-section">
+            <div class="container">
+                <h2>Technical Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3>Data Visualization & BI</h3>
+                        <p>Power BI, Tableau, Looker Studio, DAX, Matplotlib, Seaborn</p>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Data Engineering</h3>
+                        <p>SQL (Advanced), ETL/ELT Pipelines, Data Modeling, Data Mapping, Data Governance, Snowflake</p>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Programming</h3>
+                        <p>Python (Pandas, NumPy, Scikit-learn), JavaScript, Power Automate</p>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Cloud & Workflow</h3>
+                        <p>AWS, MS Azure, JIRA, Confluence, GitHub, MS Project</p>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -68,11 +93,23 @@
                     </div>
 
                     <div class="project-card" data-category="python">
+                        <h3>Wildfire Duration Analysis</h3>
+                        <p class="project-summary">Machine learning model analyzing environmental factors influencing wildfire duration for operational resource allocation.</p>
+                        <button class="details-btn" data-project="4">Show Details</button>
+                        <div class="project-details" id="project-4-details">
+                            <p><strong>Technologies:</strong> Python, Scikit-learn, Pandas, NumPy, Matplotlib, Seaborn, Machine Learning</p>
+                            <p><strong>Description:</strong> Built a predictive model to analyze environmental factors that influence wildfire duration, enabling better resource allocation and operational planning for emergency response teams.</p>
+                            <p><strong>Key Features:</strong> Regression modeling, feature engineering, environmental data analysis, predictive analytics</p>
+                            <p><strong>URL:</strong> <a href="https://github.com/LegateG/ds-wildfire/" target="_blank">https://github.com/LegateG/ds-wildfire/</a></p>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-category="python">
                         <h3>Diabetes Analysis</h3>
                         <p class="project-summary">Machine learning analysis of diabetes risk factors using Python and statistical modeling.</p>
                         <button class="details-btn" data-project="2">Show Details</button>
                         <div class="project-details" id="project-2-details">
-                            <p><strong>Technologies:</strong> Python, Jupyter Notebook, numpy, scikit-learn, matplotlib</p>
+                            <p><strong>Technologies:</strong> Python, Jupyter Notebook, NumPy, Scikit-learn, Matplotlib</p>
                             <p><strong>Description:</strong> Presented findings through clear and concise visualizations with a focus on communicating insights effectively.</p>
                             <p><strong>Key Features:</strong> Statistical analysis, healthcare data, machine learning, logistic regression</p>
                             <p><strong>URL:</strong> <a href="https://github.com/LegateG/EDA_Pima/" target="_blank">https://github.com/LegateG/EDA_Pima/</a></p>
@@ -107,7 +144,11 @@
                 </div>
                 <p>Have a project in mind or want to discuss opportunities? I'd love to hear from you!</p>
                 
-                <form id="contact-form" class="contact-form">
+                <form id="contact-form" class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="c70f2044-8377-4332-96f1-917d8beeabf0">
+                    <input type="hidden" name="subject" value="New Contact Form Submission from Portfolio">
+                    <input type="hidden" name="from_name" value="Portfolio Contact Form">
+                    
                     <div class="form-group">
                         <label for="name">Name *</label>
                         <input type="text" id="name" name="name" required>
