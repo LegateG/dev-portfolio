@@ -18,16 +18,6 @@ burgerMenu.addEventListener('click', function() {
     burgerMenu.classList.toggle('active');
     mainNav.classList.toggle('active');
 });
-
-// Close menu when clicking on nav links (mobile)
-const navLinks = document.querySelectorAll('.main-nav a');
-navLinks.forEach(link => {
-    link.addEventListener('click', function() {
-        burgerMenu.classList.remove('active');
-        mainNav.classList.remove('active');
-    });
-});
-
 // Theme switcher functionality
 const themeToggleBtn = document.getElementById('theme-toggle');
 const body = document.body;
@@ -53,6 +43,15 @@ themeToggleBtn.addEventListener('click', () => {
         localStorage.setItem('theme', 'light-mode');
     }
 });
+// Close menu when clicking on nav links (mobile)
+const navLinks = document.querySelectorAll('.main-nav a');
+navLinks.forEach(link => {
+    link.addEventListener('click', function() {
+        burgerMenu.classList.remove('active');
+        mainNav.classList.remove('active');
+    });
+});
+
 // Project details functionality
 const detailsBtns = document.querySelectorAll('.details-btn');
 
@@ -79,23 +78,24 @@ detailsBtns.forEach(btn => {
         }
     });
 });
+
 // Project filter functionality
-const filterButtons = document.querySelectorAll('.filter-btn');
+const filterBtns = document.querySelectorAll('.filter-btn');
 const projectCards = document.querySelectorAll('.project-card');
 
-filterButtons.forEach(button => {
-    button.addEventListener('click', () => {
-        // Get the filter value
-        const filter = button.getAttribute('data-filter');
+filterBtns.forEach(btn => {
+    btn.addEventListener('click', function() {
+        // Remove active class from all buttons
+        filterBtns.forEach(button => button.classList.remove('active'));
+        // Add active class to clicked button
+        this.classList.add('active');
         
-        // Remove active class from all buttons and add to the clicked one
-        filterButtons.forEach(btn => btn.classList.remove('active'));
-        button.classList.add('active');
-
-        // Show/hide projects
+        const filterValue = this.getAttribute('data-filter');
+        
         projectCards.forEach(card => {
             const category = card.getAttribute('data-category');
-            if (filter === 'all' || category === filter) {
+            
+            if (filterValue === 'all' || category === filterValue) {
                 card.classList.remove('hidden');
                 card.classList.add('show');
             } else {
@@ -105,6 +105,7 @@ filterButtons.forEach(button => {
         });
     });
 });
+
 // Contact form functionality
 document.getElementById('contact-form').addEventListener('submit', function(e) {
     e.preventDefault();
